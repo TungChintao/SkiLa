@@ -33,7 +33,7 @@ reasoning MLLMs to flexibly and seamlessly interleave multi-step explicit textua
 
 ## 💡 Highlights
 <p align='center'>
-<img src='https://github.com/TungChintao/SkiLa/blob/main/methods.jpg' alt='mask' width='950px'>
+<img src='https://github.com/TungChintao/SkiLa/blob/main/method.jpg' alt='mask' width='950px'>
 </p>
 
 
