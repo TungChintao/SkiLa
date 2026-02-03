@@ -17,7 +17,7 @@ PATTERN="vl"
 GRAD_CHECK=True
 
 RANDOM_SEED=42
-DATA_PATH="/nas/intern/jintaotong/datasets/Zebra-CoT/"
+DATA_PATH="datasets/Zebra-CoT/"
 
 GLOBAL_BATCH_SIZE=128      
 BATCH_PER_DEVICE=1           
