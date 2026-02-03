@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# export WANDB_PROJECT="Ski-Qwen25-VL-7B-SFT"
+# export WANDB_PROJECT="SkiLa-7B-SFT"
 export WANDB_DISABLED=true
 # export NCCL_DEBUG=INFO
 # export NCCL_DEBUG_SUBSYS=ALL
@@ -9,9 +9,9 @@ export WANDB_DISABLED=true
 
 # model configs
 MODEL_SIZE='7B'
-MODEL_NAME="/nas/intern/jintaotong/model_ckpt/Qwen/Qwen2.5-VL-${MODEL_SIZE}-Instruct"
+MODEL_NAME="Qwen/Qwen2.5-VL-${MODEL_SIZE}-Instruct"
 
-SKETCH_ENCODER="/nas/intern/jintaotong/model_ckpt/google/siglip2-so400m-patch14-384"
+SKETCH_ENCODER="google/siglip2-so400m-patch14-384"
 
 PATTERN="vl"
 GRAD_CHECK=True
@@ -37,10 +37,8 @@ SKETCH_TOKEN_NUM=27
 MAX_TOKEN=5120
 MIN_TOKEN=128
 
-# RUN_NAME="skila/siglipvit_${PATTERN}_sketch${SKETCH_TOKEN_NUM}_${SKETCH_LAMBDA}${SKETCH_LOSS}_${MODEL_SIZE}_lr${LR}_bsz${GLOBAL_BATCH_SIZE}_maxImgToken${MAX_TOKEN}"
-# OUTPUT_DIR="skila/siglipvit_${PATTERN}_sketch${SKETCH_TOKEN_NUM}_${SKETCH_LAMBDA}${SKETCH_LOSS}_${MODEL_SIZE}_lr${LR}_bsz${GLOBAL_BATCH_SIZE}_maxImgToken${MAX_TOKEN}"
-RUN_NAME="test"
-OUTPUT_DIR="test"
+RUN_NAME="skila/siglipvit_${PATTERN}_sketch${SKETCH_TOKEN_NUM}_${SKETCH_LAMBDA}${SKETCH_LOSS}_${MODEL_SIZE}_lr${LR}_bsz${GLOBAL_BATCH_SIZE}_maxImgToken${MAX_TOKEN}"
+OUTPUT_DIR="skila/siglipvit_${PATTERN}_sketch${SKETCH_TOKEN_NUM}_${SKETCH_LAMBDA}${SKETCH_LOSS}_${MODEL_SIZE}_lr${LR}_bsz${GLOBAL_BATCH_SIZE}_maxImgToken${MAX_TOKEN}"
 
 
 export PYTHONPATH=$(pwd)
@@ -82,6 +80,4 @@ deepspeed src/train/train_skila.py \
     --dataloader_num_workers 8 \
     --random_seed $RANDOM_SEED \
     --report_to tensorboard # or wandb
-
-python /nas/intern/jintaotong/tool/train.py
 
