@@ -26,7 +26,7 @@ Yixiong Zou<sup>1✉</sup>
 
 ## 🔥 News
 
-* **`2026.02.03`** 🤗 The checkpoints of [SkiLa 7B](https://huggingface.co/JosephTong/SkiLa-7B) is released!
+* **`2026.02.05`** 🤗 The checkpoints of [SkiLa 7B](https://huggingface.co/JosephTong/SkiLa-7B) is released!
 * **`2026.02.03`** 🚀 [Code](https://github.com/TungChintao/SkiLa) is released ！
 * **`2025.12.16`** 📝 We release our latest work [Sketch-in-Latents (SkiLa)](https://arxiv.org/abs/2512.16584), a novel unified
 reasoning MLLMs to flexibly and seamlessly interleave multi-step explicit textual thoughts and latent visual thoughts.
