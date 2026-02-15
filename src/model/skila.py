@@ -140,10 +140,10 @@ class SkiLa(Qwen2_5_VLForConditionalGeneration):
             model_inputs.update({"sketch_hidden_state": sketch_hidden_state})
 
             if is_prefill:
-                outputs = self(**model_inputs, return_dict=True, generate_mode=True)
+                outputs = self(**model_inputs, return_dict=True)
                 is_prefill = False
             else:
-                outputs = model_forward(**model_inputs, return_dict=True, generate_mode=True)
+                outputs = model_forward(**model_inputs, return_dict=True)
 
             # synced_gpus: don't waste resources running the code we don't need; kwargs must be updated before skipping
             model_kwargs = self._update_model_kwargs_for_generation(
